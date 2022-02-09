@@ -9,10 +9,26 @@
     border: none;
 }
 
+hr{
+    border: 1px solid #ed3408;
+    width: 100vw;
+    margin-top: 100px;
+}
+
+span{
+    color: #ed3408;
+}
+
 body{
     background: #1f2326;
     color: white;
     font-family:'Courgette', cursive;
+    box-sizing: border-box;
+}
+
+#background-img{
+    background-image: url(./assets/bacg04.jpg);
+    background-size: cover;
 }
 
 header{
@@ -22,73 +38,92 @@ header{
     background-image: url(./assets/logo03-opacity.jpeg);
     background-size:contain;
     background-repeat: round;
-    height: 480px;
+    height: 500px;
     padding-top: 15px;
-    font-size: 1.5rem;
-}
-
-header h1{
-    opacity: 1;
-}
-
-span{
-    color: #ed3408;
+    font-size: 2rem;
 }
 
 main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 60px;
+    
 }
 
 main h2{
-    font-size:3.5rem;
-    margin-top: 10px;
-    margin-bottom: 30px;
+    font-size:4rem;
+    margin-bottom: 50px;
 }
 
 #galery{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 50px;
-    grid-row-gap: 15px;
+    grid-row-gap: 5px;
+    position: relative;
+    height: 1100px;
+    width: 910px;
 }
 
 .gallery-img{
-    height: 400px;
+    height: 500px;
     width: 300px;
     background: white;
-    border: 2px solid #ed3408;
+    border: 3px solid #ed3408;
 }
 
 .gallery-img:nth-child(1){
-    background-image: url(./assets//tatoo01.jpeg);
+    background-image: url(./assets//tatoo06.jpeg);
     background-size: cover;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 100% 80%, 0% 100%);
+    position: absolute;
+    left: -70px;
 }
 
 .gallery-img:nth-child(2){
-    background-image: url(./assets//tatoo02.jpeg);
+    background-image: url(./assets//tatoo05.jpeg);
     background-size: cover;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 100% 80%, 0% 100%);
+    position: absolute;
+    right: 303.33px;
 }
 
 .gallery-img:nth-child(3){
     background-image: url(./assets//tatoo03.jpeg);
     background-size: cover;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 100% 80%, 0% 100%);
+    height: 500px;
+    position: absolute;
+    right: -70px;
 }
 
 .gallery-img:nth-child(4){
     background-image: url(./assets//tatoo04.jpeg);
     background-size: cover;
+    clip-path: polygon(0% 20%, 100% 0%, 100% 0%, 100% 100%, 0% 100%);
+    position: absolute;
+    top: 420px;
+    left: -70px;  
 }
 
 .gallery-img:nth-child(5){
-    background-image: url(./assets//tatoo05.jpeg);
+    background-image: url(./assets//tatoo02.jpeg);
     background-size: cover;
+    clip-path: polygon(0% 20%, 100% 0%, 100% 0%, 100% 100%, 0% 100%);
+    position: absolute;
+    right: 303.33px;
+    top: 420px;    
 }
 
 .gallery-img:nth-child(6){
-    background-image: url(./assets//tatoo06.jpeg);
+    background-image: url(./assets//tatoo01.jpeg);
     background-size: cover;
+    clip-path: polygon(0% 20%, 100% 0%, 100% 0%, 100% 100%, 0% 100%);
+    height: 500px;
+    position: absolute;
+    right: -70px;
+    top: 420px;
 }
 
 #description{
@@ -100,14 +135,15 @@ main h2{
     width: 600px;
     display: grid;
     grid-template-columns: 300px 300px;
-    grid-column-gap: 5px;
+    grid-column-gap: 100px;
 }
 
-#description-area p{
-    margin-top: auto;
-    margin-bottom: auto;
+#about-text p{
+    font-size: 1.2rem;
 }
 
 #description img{
     width: 300px;
+    border-radius: 20px;
+    border:  5px solid white;
 }
